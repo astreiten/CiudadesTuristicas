@@ -1,0 +1,37 @@
+{
+	"puntosTuristicos" : [
+	{
+		"nombre":"",
+		"direccion":"",
+		"coordenadas":[
+			{
+			"norte":"",
+			"sur":""
+			}
+		]
+	},
+
+	{
+		"nombre":"",
+		"direccion":"",
+		"coordenadas":[
+			{
+			"norte":"",
+			"sur":""
+			}
+		]
+	},
+
+	{
+		"nombre":"",
+		"direccion":"",
+		"coordenadas":[
+			{
+			"norte":"",
+			"sur":""
+			}
+		]
+	}
+
+	] 
+}
