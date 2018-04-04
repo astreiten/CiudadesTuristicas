@@ -1,25 +1,25 @@
 function prueba() {
-    document.getElementById("campo").firstChild.data = "funciono";
+    document.getElementById("campo").firstChild.data = "Aca deberia aparecer todos los recorridos para esas caracteristicas. ";
 }
 
 function init(){
  document.getElementById("campo").firstChild.data = "hola";
  var xmlhttp= new XMLHttpRequest();
- var url="https://github.com/astreiten/CiudadesTuristicas/blob/master/data/pizzas.json";
+ var url='./data/pizza.JSON';
+
+
  xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var myArr = JSON.parse(this.responseText);
         myFunction(myArr);
     }
     else{
-         document.getElementById("campo").firstChild.data = this.status + " MODIFICADO " + this.readyState;
-         
+         document.getElementById("campo").firstChild.data = "Status: " + this.status + "State " + this.readyState;
     }
 }
 
-
-  xmlhttp.open("GET", url, true);
   
+  xmlhttp.open("GET", url, true);
   xmlhttp.send();
 
 }
