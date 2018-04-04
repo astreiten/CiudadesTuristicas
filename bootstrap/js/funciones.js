@@ -2,6 +2,11 @@ function prueba() {
     document.getElementById("campo").firstChild.data = "Aca deberia aparecer todos los recorridos para esas caracteristicas. ";
 }
 
+function oyente(){
+  document.getElementById("campo").firstChild.data = "LA CONCHA DE TU MADRE";
+  initMap();
+}
+
 function init(){
  document.getElementById("campo").firstChild.data = "hola";
  var xmlhttp= new XMLHttpRequest();
@@ -32,4 +37,13 @@ function init(){
       document.getElementById("campo").firstChild.data = arr.prueba;
    
 }
+
+function initMap() {
+        // Create a map object and specify the DOM element for display.
+        var map = new google.maps.Map(document.getElementById("campo"), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+
 
