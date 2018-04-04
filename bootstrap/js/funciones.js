@@ -5,7 +5,7 @@ function prueba() {
 function init(){
  document.getElementById("campo").firstChild.data = "hola";
  var xmlhttp= new XMLHttpRequest();
- var url='CiudadesTuristicas/bootstrap/js/pizzas.json';
+ var url="https://astreiten.github.io/CiudadesTuristicas/bootstrap/js/pizzas.json";
 
 
  xmlhttp.onreadystatechange = function() {
@@ -20,6 +20,7 @@ function init(){
 
   
   xmlhttp.open("GET", url, true);
+
   xmlhttp.send();
 
 }
@@ -27,7 +28,8 @@ function init(){
 
   function myFunction(arr) {
     
-     document.getElementById("campo").firstChild.data = "entre";
-    document.getElementById("campo").firstChild.data = arr[0].display;
+     document.getElementById("campo").firstChild.data = "entre a la nueva version";
+      document.getElementById("campo").firstChild.data = arr.prueba;
+   
 }
 
