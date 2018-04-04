@@ -5,7 +5,7 @@ function prueba() {
 function init(){
  document.getElementById("campo").firstChild.data = "hola";
  var xmlhttp= new XMLHttpRequest();
- var url='./data/pizza.JSON';
+ var url='./js/pizza.JSON';
 
 
  xmlhttp.onreadystatechange = function() {
