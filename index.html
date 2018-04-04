@@ -1,54 +1,48 @@
 <!doctype html>
 <html lang="en">
-<head>
+<head>  
+    <link rel="shortcut icon" href="icono.png">
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+ <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="js/ajax.js"></script>
-   <script type="text/javascript" src="js/pruebaInteraccion.js"></script>
+   <script type="text/javascript" src="js/pruebaInteraccion.js"></script> <!---kesesto -->
    <script type="text/javascript" src="js/funciones.js"></script>
+
 
   <!-- Titulo de la pagina -->
   <title>Recorridos turisticos</title>
 </head>
 
-<body style="background-color:#FFFFE0;">
+<body style="background-color:#FFFFFF;">
+   <div class="text-center">
+    <img src="imagen.jpg" >
+  </div>
   <div class="container-fluid">
     <!-- Titulo de la pagina -->
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar-fluid" style="background-color:#FFFFFF;">
      <a class="navbar-brand" href="#">
-       <img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
        ElNombreDeLaEmpresa
      </a>
     </nav>
 
-     <!-- Eleccion de seccion -->
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Recorridos</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Calificaciones</li>
-      </ol>
-    </nav>
-
-
       <!-- Titulo de los radioButton -->
       <div class="container-fluid">
-       <nav class="navbar navbar-light bg-light">
-        <span class="navbar-text">
-         <h2>  <p style="color:black;">Seleccione sus preferencias de recorrido
-         </p>
-         </h2>
-        </span>
-      </nav>
 
        <!--- Primera columna -->
        <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-5" style="background-color:#FFF8DC;">
+          <nav class="navbar" background-color:#FFFFE0;">
+          <span class="navbar-text">
+          <h2>  <p style="font-family: monospace;, serif; font-size:16pt;" >Seleccione sus preferencias de recorrido
+                </p>
+          </h2>
+          </span>
+          </nav>
 
           <!-- Titulo MEDIO DE TRANSPORTE -->
           <nav class="navbar navbar-light">
@@ -203,7 +197,7 @@
         </div> <!--Cierre contenedor COLUMNA 1 -->
 
   <!--- Segunda columna -->
-  <div id="campo" class="col-md-7">
+  <div id="campo" class="col-md-7" style="background-color:#FFEBCD;">
    Segunda columna
     <button onclick="init()" type="button" class="btn btn-outline-secondary">Seleccionar </button>
   </div> <!-- Cierre contenedor COLUMNA 2 -->
