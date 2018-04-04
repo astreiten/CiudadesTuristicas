@@ -100,7 +100,7 @@ function filtrarRecorridos(){
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var myArr = JSON.parse(this.responseText);
-        var elto=myArr.puntosTuristicos;
+        var elto=myArr.puntosTuristicos[0].nombre;
         alert("RESULTADO "+elto);
     }
     else{
