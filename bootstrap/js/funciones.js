@@ -5,7 +5,7 @@ function prueba() {
 function init(){
  document.getElementById("campo").firstChild.data = "hola";
  var xmlhttp= new XMLHttpRequest();
- var url='./js/pizzas.json';
+ var url='CiudadesTuristicas/bootstrap/js/pizzas.json';
 
 
  xmlhttp.onreadystatechange = function() {
