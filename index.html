@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="js/ajax.js"></script>
+   <script type="text/javascript" src="js/pruebaInteraccion.js"></script>
+   <script type="text/javascript" src="js/funciones.js"></script>
+
+  <!-- Titulo de la pagina -->
+  <title>Recorridos turisticos</title>
+</head>
+
+<body style="background-color:#FFFFE0;">
+  <div class="container-fluid">
+    <!-- Titulo de la pagina -->
+    <nav class="navbar navbar-light bg-light">
+     <a class="navbar-brand" href="#">
+       <img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+       ElNombreDeLaEmpresa
+     </a>
+    </nav>
+
+     <!-- Eleccion de seccion -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Recorridos</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Calificaciones</li>
+      </ol>
+    </nav>
+
+
+      <!-- Titulo de los radioButton -->
+      <div class="container-fluid">
+       <nav class="navbar navbar-light bg-light">
+        <span class="navbar-text">
+         <h2>  <p style="color:black;">Seleccione sus preferencias de recorrido
+         </p>
+         </h2>
+        </span>
+      </nav>
+
+       <!--- Primera columna -->
+       <div class="row">
+        <div class="col-md-5">
+
+          <!-- Titulo MEDIO DE TRANSPORTE -->
+          <nav class="navbar navbar-light">
+            <span class="navbar-text">
+              <h4> Medio de transporte
+              </h4>
+            </span>
+          </nav>
+
+          <form action="">
+          <div class="container">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+              <label class="form-check-label" for="exampleRadios1">
+                Bicicleta
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+              <label class="form-check-label" for="exampleRadios2">
+               Colectivo
+             </label>
+           </div>
+           <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" >
+            <label class="form-check-label" for="exampleRadios3">
+              Auto
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4" >
+            <label class="form-check-label" for="exampleRadios4">
+              Caminando
+            </label>
+          </div>
+        </div> <!--Cierre contenedor MEDIO DE TRANSPORTE -->
+        </form>
+
+        <!-- Titulo DURACION -->
+        <nav class="navbar navbar-light">
+          <span class="navbar-text">
+            <h4> Duracion maxima
+            </h4>
+          </span>
+        </nav>
+        
+        <form action="">
+        <div class="container">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <label class="form-check-label" for="exampleRadios1">
+              Media hora
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+            <label class="form-check-label" for="exampleRadios2">
+             Una hora
+           </label>
+         </div>
+         <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" >
+          <label class="form-check-label" for="exampleRadios3">
+            Dos horas
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4" >
+          <label class="form-check-label" for="exampleRadios4">
+            Cinco horas
+          </label>
+        </div>
+      </div> <!-- Cierre contenedor DURACION -->
+    </form>
+
+      <!--Titulo recorridos -->
+      <nav class="navbar navbar-light">
+        <span class="navbar-text">
+          <h4> Categorias del recorrido
+          </h4>
+        </span>
+      </nav>
+
+      <form action="">
+      <div class="container">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+          <label class="form-check-label" for="exampleRadios1">
+            Recorrido turistico
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+          <label class="form-check-label" for="exampleRadios2">
+           Recorrido historico
+         </label>
+         </div>
+         <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" >
+          <label class="form-check-label" for="exampleRadios3">
+            Recorrido NOSE
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4">
+          <label class="form-check-label" for="exampleRadios4">
+            Tampoco se
+          </label>
+        </div>
+        </div> <!-- Cierre contenedor RECORRIDOS-->
+        </form>
+
+        <!--Titulo tarifas-->
+        <nav class="navbar navbar-light">
+          <span class="navbar-text">
+            <h4> Tarifa maxima por persona
+            </h4>
+          </span>
+        </nav>
+
+        <form action="">
+        <div class="container">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <label class="form-check-label" for="exampleRadios1">
+              $100
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+            <label class="form-check-label" for="exampleRadios2">
+             $500
+           </label>
+         </div>
+         <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" >
+          <label class="form-check-label" for="exampleRadios3">
+            $1000
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4">
+          <label class="form-check-label" for="exampleRadios4">
+            $5000
+          </label>
+        </div> 
+        </div> <!--Cierre contenedor TARIFAS -->
+       </form>
+
+        <button onclick="prueba()" type="button" class="btn btn-outline-secondary">Seleccionar</button>
+
+        </div> <!--Cierre contenedor COLUMNA 1 -->
+
+  <!--- Segunda columna -->
+  <div id="campo" class="col-md-7">
+   Segunda columna
+    <button onclick="init()" type="button" class="btn btn-outline-secondary">Seleccionar </button>
+  </div> <!-- Cierre contenedor COLUMNA 2 -->
+
+  </div> <!-- Cierre contenedor FILA -->
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+</div> <!-- Cierra el contenedor de la pagina -->
+</body>
+</html>
