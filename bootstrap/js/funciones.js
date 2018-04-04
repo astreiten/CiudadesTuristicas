@@ -91,4 +91,28 @@ function encontrarChequeado(){
     alert("La elegida para duracion es "+duracion_valor);
 }
 
+funtion getRecorridos(){
+
+}
+
+function filtrarRecorridos(medioTransporte,duracion,categoria,gastoMaximo){
+  var xmlhttp= new XMLHttpRequest();
+  var url="https://astreiten.github.io/CiudadesTuristicas/bootstrap/js/pizzas.json";
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myArr = JSON.parse(this.responseText);
+        myFunction(myArr);
+    }
+    else{
+         document.getElementById("campo").firstChild.data = "Status: " + this.status + "State " + this.readyState;
+    }
+}
+
+  
+  xmlhttp.open("GET", url, true);
+
+  xmlhttp.send();
+
+}
+
 

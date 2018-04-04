@@ -1,0 +1,53 @@
+{
+	"recorridos" : [
+	{
+		"nombre":"museosNuevaYork",
+		"tiempo":"3",
+		"categoria":"cultural",
+		"tarifa":"7",
+		"puntos": [
+			{
+		"nombre":"Metropolitan Museum of Art",
+		"direccion":"1000 5th Ave, New York, NY 10028, EE. UU.",
+		"coordenadas":[
+			{
+			"norte":"40.780556",
+			"sur":"-73.974722"
+			}
+		]
+	},
+
+	{
+		"nombre":"Museo Americano de Historia Natural",
+		"direccion":"Central Park West & 79th St, New York, NY 10024, EE. UU.",
+		"coordenadas":[
+			{
+			"norte":"40.7813241",
+			"sur":"-73.9761769"
+			}
+		]
+	},
+
+	{
+		"nombre":"Neue Galerie",
+		"direccion":"1048 5th Ave, New York, NY 10028, EE. UU.",
+		"coordenadas":[
+			{
+			"norte":"40.7815176",
+			"sur":"-73.9630838"
+			}
+		]
+	}
+
+		],
+		"apto":[
+		{
+			"aptoCaminando":"si",
+			"aptoAuto":"no",
+			"aptoBus":"no",
+			"aptoBici":"no",
+		}
+		]
+	}
+  ]
+}
