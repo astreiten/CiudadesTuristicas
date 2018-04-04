@@ -12,7 +12,7 @@ function init(){
         myFunction(myArr);
     }
     else{
-         document.getElementById("campo").firstChild.data = this.status + "aca " + this.readyState;
+         document.getElementById("campo").firstChild.data = this.status + " MODIFICADO " + this.readyState;
          
     }
 }
