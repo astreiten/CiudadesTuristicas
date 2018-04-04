@@ -47,18 +47,48 @@ function initMap() {
       }
 
 function encontrarChequeado(){
-  
+  //Encontrar chequeado movilidad
+  var movilidad = document.getElementsByName('movilidad');
+  var movilidad_valor;
+  for (var i = 0; i < 4; i++){    
+      if(movilidad[i].checked){
+          movilidad_valor = movilidad[i].value;
+      }
+  }
+    alert("La elegida para movilidad es "+movilidad_valor);
 
-  var rates = document.getElementsByName('movi');
-  var rate_value;
-  var i;
-for (i = 0; i < 4; i++){
-  
-    if(rates[i].checked){
-        rate_value = rates[i].value;
-    }
-}
-  alert("La elegida es "+rate_value);
+
+  //Encontrar chequeado tarifa
+  var tarifa = document.getElementsByName('tarifa');
+  var tarifa_valor;
+  for (var i = 0; i < 4; i++){    
+      if(tarifa[i].checked){
+          tarifa_valor = tarifa[i].value;
+      }
+  }
+    alert("La elegida para tarifa es "+tarifa_valor);
+
+
+  //Encontrar chequeado categoria
+  var categoria = document.getElementsByName('categoria');
+  var categoria_valor;
+  for (var i = 0; i < 4; i++){    
+      if(categoria[i].checked){
+          categoria_valor = categoria[i].value;
+      }
+  }
+    alert("La elegida para categoria es "+categoria_valor);
+
+
+  //Encontrar chequeado categoria
+  var duracion = document.getElementsByName('duracion');
+  var duracion_valor;
+  for (var i = 0; i < 4; i++){    
+      if(duracion[i].checked){
+          duracion_valor = duracion[i].value;
+      }
+  }
+    alert("La elegida para duracion es "+duracion_valor);
 }
 
 
