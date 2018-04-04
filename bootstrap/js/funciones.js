@@ -46,4 +46,19 @@ function initMap() {
         });
       }
 
+function encontrarChequeado(){
+  
+
+  var rates = document.getElementsByName('movi');
+  var rate_value;
+  var i;
+for (i = 0; i < 4; i++){
+  
+    if(rates[i].checked){
+        rate_value = rates[i].value;
+    }
+}
+  alert("La elegida es "+rate_value);
+}
+
 
