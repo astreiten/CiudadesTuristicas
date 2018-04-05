@@ -100,8 +100,8 @@ function filtrarRecorridos(){
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var myArr = JSON.parse(this.responseText);
-        var elto=myArr;
-        alert("RESULTADO de recorridos "+elto.recorridos[0].nombre);
+        var elto=myArr.recorridos[0].nombre;
+        alert("RESULTADO "+elto);
     }
     else{
          document.getElementById("campo").firstChild.data = "Status: " + this.status + "State " + this.readyState;
