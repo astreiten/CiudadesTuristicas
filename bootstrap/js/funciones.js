@@ -96,11 +96,11 @@ function encontrarChequeado(){
 
 function filtrarRecorridos(){
   var xmlhttp= new XMLHttpRequest();
-  var url="https://astreiten.github.io/CiudadesTuristicas/bootstrap/js/recorridos.json";
+  var url="https://astreiten.github.io/CiudadesTuristicas/bootstrap/js/puntos.json";
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var myArr = JSON.parse(this.responseText);
-        var elto=myArr.recorridos[0].nombre;
+        var elto=myArr.puntosTuristicos[0].nombre;
         alert("RESULTADO "+elto);
     }
     else{
