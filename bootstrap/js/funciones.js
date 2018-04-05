@@ -55,7 +55,6 @@ function encontrarChequeado(){
           movilidad_valor = movilidad[i].value;
       }
   }
-    alert("La elegida para movilidad es "+movilidad_valor);
 
 
   //Encontrar chequeado tarifa
@@ -66,7 +65,6 @@ function encontrarChequeado(){
           tarifa_valor = tarifa[i].value;
       }
   }
-    alert("La elegida para tarifa es "+tarifa_valor);
 
 
   //Encontrar chequeado categoria
@@ -77,7 +75,6 @@ function encontrarChequeado(){
           categoria_valor = categoria[i].value;
       }
   }
-    alert("La elegida para categoria es "+categoria_valor);
 
 
   //Encontrar chequeado categoria
@@ -87,14 +84,20 @@ function encontrarChequeado(){
       if(duracion[i].checked){
           duracion_valor = duracion[i].value;
       }
-  }
-    alert("La elegida para duracion es "+duracion_valor);
+  }    alert("La elegida para duracion es "+duracion_valor);
+    alert("La elegida para categoria es "+categoria_valor);
+    alert("La elegida para tarifa es "+tarifa_valor);
+    alert("La elegida para movilidad es "+movilidad_valor);
+
+    filtrarRecorridos(movilidad_valor, tarifa_valor, categoria_valor, duracion_valor);
 }
 
 
 
 
-function filtrarRecorridos(){
+function filtrarRecorridos(movilidad_valor, tarifa_valor, categoria_valor, duracion_valor){
+	
+
   var xmlhttp= new XMLHttpRequest();
   var url="https://astreiten.github.io/CiudadesTuristicas/bootstrap/js/recorridos.json";
   xmlhttp.onreadystatechange = function() {
