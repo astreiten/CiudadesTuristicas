@@ -3,7 +3,6 @@ function prueba() {
 }
 
 function oyente(){
-  document.getElementById("campo").firstChild.data = "LA CONCHA DE TU MADRE";
   initMap();
 }
 
@@ -90,5 +89,3 @@ function encontrarChequeado(){
   }
     alert("La elegida para duracion es "+duracion_valor);
 }
-
-
