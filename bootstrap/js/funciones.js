@@ -97,29 +97,34 @@ function filtrarRecorridos(movilidad_valor, tarifa_valor, categoria_valor, durac
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var myArr = JSON.parse(this.responseText);
-        var elto=myArr.recorridos[0].nombre;
-        alert("RESULTADO NUEVO "+elto);
-       
-        alert("La dataaaa es "+myArr.recorridos.length);
+        
         var cumpleMovi=false;
         var cumpleTari=false;
         var cumpleCat=false;
         var cumpleDur=false;
-        var bol=myArr.recorridos[0].tarifa < tarifa_valor;
- 	if(bol){
- 		cumpleTari=true;
- 		alert(tarifa_valor+" "+myArr.recorridos[0].tarifa);
- 	}
-  	//cumpleMovi=movilidad_valor<=recorridos[i].tarifa;
-  	if(cumpleTari){
-  		alert("el recorrido cumple");
-  	}
-  	else{
-	alert("el recorrido no cumple");
-  	}
+        
+        for (var j=0; j<myArr.recorridos.length;j++)
+        {
+          cumpleMovi=chequearMovi(myArr.recorridos[j],movilidad_valor);
+          cumpleTari=chequearTari(myArr.recorridos[j],tarifa_valor);
+          cumpleCat=chequearCat(myArr.recorridos[j],categoria_valor);
+          cumpleDur=chequearDur(myArr.recorridos[j],duracion_valor);
 
-  
-        mostrarRecorridos();
+          if(cumpleTari && cumpleDur && cumpleCat && cumpleMovi)
+          {
+            alert("el recorrido fue agregado con la nueva logica");
+          }
+          else
+          {
+            alert("el recorrido NO fue agregado con la nueva logica");
+          }
+
+          cumpleMovi=false;
+          cumpleTari=false;
+          cumpleCat=false;
+          cumpleDur=false;
+        }
+        
     }
     else{
          document.getElementById("campo").firstChild.data = "Status: " + this.status + "State " + this.readyState;
@@ -131,6 +136,22 @@ function filtrarRecorridos(movilidad_valor, tarifa_valor, categoria_valor, durac
 
 }
 
-function mostrarRecorridos() {
-	
+function chequearMovi(reco,movilidad_valor)
+{
+  return true;
+}
+
+function chequearCat(reco,movilidad_valor)
+{
+  return true;
+}
+
+function chequearDur(reco,duracion_valor)
+{
+  return duracion_valor>= reco.tiempo;
+}
+
+function chequearTari(reco,tarifa_valor)
+{
+  return tarifa_valor>=reco.tarifa;
 }
