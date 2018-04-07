@@ -84,10 +84,7 @@ function encontrarChequeado(){
       if(duracion[i].checked){
           duracion_valor = duracion[i].value;
       }
-  }    alert("La elegida para duracion es "+duracion_valor);
-    alert("La elegida para categoria es "+categoria_valor);
-    alert("La elegida para tarifa es "+tarifa_valor);
-    alert("La elegida para movilidad es "+movilidad_valor);
+  }
 
     filtrarRecorridos(movilidad_valor, tarifa_valor, categoria_valor, duracion_valor);
 }
@@ -96,15 +93,34 @@ function encontrarChequeado(){
 
 
 function filtrarRecorridos(movilidad_valor, tarifa_valor, categoria_valor, duracion_valor){
-	
-
-  var xmlhttp= new XMLHttpRequest();
+  var xmlhttp = new XMLHttpRequest();
   var url="https://astreiten.github.io/CiudadesTuristicas/bootstrap/js/recorridos.json";
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var myArr = JSON.parse(this.responseText);
         var elto=myArr.recorridos[0].nombre;
         alert("RESULTADO NUEVO "+elto);
+       
+        alert("La dataaaa es "+myArr.recorridos.length);
+        var cumpleMovi=false;
+        var cumpleTari=false;
+        var cumpleCat=false;
+        var cumpleDur=false;
+        var bol=myArr.recorridos[0].tarifa < tarifa_valor;
+ 	if(bol){
+ 		cumpleTari=true;
+ 		alert(tarifa_valor+" "+myArr.recorridos[0].tarifa);
+ 	}
+  	//cumpleMovi=movilidad_valor<=recorridos[i].tarifa;
+  	if(cumpleTari){
+  		alert("el recorrido cumple");
+  	}
+  	else{
+	alert("el recorrido no cumple");
+  	}
+
+  
+        mostrarRecorridos();
     }
     else{
          document.getElementById("campo").firstChild.data = "Status: " + this.status + "State " + this.readyState;
@@ -112,10 +128,12 @@ function filtrarRecorridos(movilidad_valor, tarifa_valor, categoria_valor, durac
 }
   xmlhttp.open("GET", url, true);
   xmlhttp.send();
-
   
 
+}
 
+function mostrarRecorridos() {
+	
 }
 
 
