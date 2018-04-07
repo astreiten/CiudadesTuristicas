@@ -62,14 +62,8 @@
 
        <!--- Primera columna -->
        <div class="row">
-        <div class="col-md-5" style="background-color:#FFF8DC;">
-          <nav class="navbar" background-color:#FFFFE0;">
-          <span class="navbar-text">
-          <h2>  <p style="font-family: monospace;, serif; font-size:16pt;" >Seleccione sus preferencias de recorrido
-                </p>
-          </h2>
-          </span>
-          </nav>
+        <div class="col-md-3" style="background-color:#FFF8DC;">
+
 
           <!-- Titulo MEDIO DE TRANSPORTE -->
           <nav class="navbar navbar-light">
@@ -145,6 +139,9 @@
       </div> <!-- Cierre contenedor DURACION -->
     </form>
 
+  </div>
+
+    <div class="col-md-3" style="background-color:#FFF8DC;">
       <!--Titulo recorridos -->
       <nav class="navbar navbar-light">
         <span class="navbar-text">
@@ -218,16 +215,17 @@
         </div> 
         </div> <!--Cierre contenedor TARIFAS -->
        </form>
-
-        <button onclick="encontrarChequeado()" type="button" class="btn btn-outline-secondary">Filtrar</button>
-
-        </div> <!--Cierre contenedor COLUMNA 1 -->
+   
+        <button onclick="encontrarChequeado()" type="button" class="float-md-right">Filtrar recorridos</button>
+        
+        </div>
+    <!--    </div> <!--Cierre contenedor COLUMNA 1 -->
 
 
 
   <!--- Segunda columna -->
 
-  <div id="campo" class="col-md-7" style="background-color:#FFEBCD;">
+  <div id="campo" class="col-md-6" style="background-color:#FFEBCD;">
 
  <div id="mapa" style="background-color:#FFFFFF;">
       Aca va el mapa
