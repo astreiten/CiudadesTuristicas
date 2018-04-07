@@ -3,7 +3,6 @@ function prueba() {
 }
 
 function oyente(){
-  document.getElementById("campo").firstChild.data = "LA CONCHA DE TU MADRE";
   initMap();
 }
 
@@ -42,7 +41,7 @@ function initMap() {
         // Create a map object and specify the DOM element for display.
         var map = new google.maps.Map(document.getElementById("campo"), {
           center: {lat: -34.397, lng: 150.644},
-          zoom: 8
+          zoom: 10
         });
       }
 
@@ -135,5 +134,3 @@ function filtrarRecorridos(movilidad_valor, tarifa_valor, categoria_valor, durac
 function mostrarRecorridos() {
 	
 }
-
-
