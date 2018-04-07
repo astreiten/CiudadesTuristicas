@@ -43,6 +43,12 @@ function initMap() {
           center: {lat: -34.397, lng: 150.644},
           zoom: 10
         });
+
+        var marker=new google.maps.Marker({
+          position: {lat: -34.397, lng: 150.644},
+          map:map,
+          title: 'hello world'
+        })
       }
 
 function encontrarChequeado(){
