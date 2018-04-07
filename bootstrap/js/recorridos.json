@@ -45,6 +45,63 @@
 		"apto":[
 		  "auto","moto"
 		]
+	},
+	{
+		"nombre":"atraccionJovenes",
+		"tiempo": 4,
+		"categoria":"ninos",
+		"tarifa": 10,
+		"puntos": 
+		[
+			{
+				"nombre":"Zoologico del Central Park",
+				"direccion":"E 64th St & 5th Ave, New York, NY 10021, EE. UU.",
+				"coordenadas":[
+					
+					"40.767778",
+					"73.9740222"
+					
+				]
+			},
+
+			{
+				"nombre":"Top of the Rock",
+				"direccion":"30 Rockefeller Plaza, New York, NY 10020, EE. UU.",
+				"coordenadas":[
+					
+					"40.7579114",
+					"-73.9888795"
+					
+					]
+			},
+
+			{
+				"nombre":"Times Square",
+				"direccion":"Manhattan, Nueva York 10036, EE. UU.",
+				"coordenadas":[
+					
+					"40.758895",
+					"-73.9873197"
+					
+				]
+			},
+
+				{
+				"nombre":"Mundo de M&M'S",
+				"direccion":"1600 Broadway, New York, NY 10019, EE. UU.",
+				"coordenadas":[
+					
+					"40.7601999",
+					"-73.9865488"
+					
+				]
+			}
+			
+		
+		],
+		"apto":[
+		  "auto", "colectivo"
+		]
 	}
   ]
 }

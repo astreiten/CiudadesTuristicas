@@ -39,7 +39,7 @@ function init(){
 
 function initMap() {
         // Create a map object and specify the DOM element for display.
-        var map = new google.maps.Map(document.getElementById("campo"), {
+        var map = new google.maps.Map(document.getElementById("campo"), { //PONERLE CAMPOOOOOOOOO 
           center: {lat: -34.397, lng: 150.644},
           zoom: 10
         });
@@ -98,19 +98,19 @@ function filtrarRecorridos(movilidad_valor, tarifa_valor, categoria_valor, durac
     if (this.readyState == 4 && this.status == 200) {
         var myArr = JSON.parse(this.responseText);
         
-        var cumpleMovi=false;
-        var cumpleTari=false;
-        var cumpleCat=false;
-        var cumpleDur=false;
+        var cumpleMovilidad=false;
+        var cumpleTarifa=false;
+        var cumpleCategoria=false;
+        var cumpleDuracion=false;
         
         for (var j=0; j<myArr.recorridos.length;j++)
         {
-          cumpleMovi=chequearMovi(myArr.recorridos[j],movilidad_valor);
-          cumpleTari=chequearTari(myArr.recorridos[j],tarifa_valor);
-          cumpleCat=chequearCat(myArr.recorridos[j],categoria_valor);
-          cumpleDur=chequearDur(myArr.recorridos[j],duracion_valor);
+          cumpleMovilidad=chequearMovilidad(myArr.recorridos[j],movilidad_valor);
+          cumpleTarifa=chequearTarifa(myArr.recorridos[j],tarifa_valor);
+          cumpleCategoria=chequearCategoria(myArr.recorridos[j],categoria_valor);
+          cumpleDuracion=chequearDuracion(myArr.recorridos[j],duracion_valor);
 
-          if(cumpleTari && cumpleDur && cumpleCat && cumpleMovi)
+          if(cumpleTarifa && cumpleDuracion && cumpleCategoria && cumpleMovilidad)
           {
             alert("el recorrido fue agregado con la nueva logica");
           }
@@ -119,10 +119,10 @@ function filtrarRecorridos(movilidad_valor, tarifa_valor, categoria_valor, durac
             alert("el recorrido NO fue agregado con la nueva logica");
           }
 
-          cumpleMovi=false;
-          cumpleTari=false;
-          cumpleCat=false;
-          cumpleDur=false;
+          cumpleMovilidad=false;
+          cumpleTarifa=false;
+          cumpleCategoria=false;
+          cumpleDuracion=false;
         }
         
     }
@@ -136,22 +136,27 @@ function filtrarRecorridos(movilidad_valor, tarifa_valor, categoria_valor, durac
 
 }
 
-function chequearMovi(reco,movilidad_valor)
+function chequearMovilidad(recorrido,movilidad_valor)
 {
-  return true;
+  for (var i=0; i<recorrido.apto.length ; i ++){
+    if (recorrido.apto[i] == movilidad_valor){
+     return true;
+    }
+  }
+  return false;
 }
 
-function chequearCat(reco,movilidad_valor)
+function chequearCategoria(recorrido,categoria_valor)
 {
-  return true;
+  return categoria_valor == recorrido.categoria;
 }
 
-function chequearDur(reco,duracion_valor)
+function chequearDuracion(recorrido,duracion_valor)
 {
-  return duracion_valor>= reco.tiempo;
+  return duracion_valor >= recorrido.tiempo;
 }
 
-function chequearTari(reco,tarifa_valor)
+function chequearTarifa(recorrido,tarifa_valor)
 {
-  return tarifa_valor>=reco.tarifa;
+  return tarifa_valor >= recorrido.tarifa;
 }
