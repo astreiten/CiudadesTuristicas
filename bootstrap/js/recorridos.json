@@ -192,6 +192,140 @@
 		"apto":[
 		  "bicicleta"
 		]
+	}, 
+		{
+		"nombre":"MidtownManhattan",
+		"tiempo": 5,
+		"categoria":"turistico",
+		"tarifa": 5,
+		"puntos": 
+		[
+			{
+				"nombre":"Hotel Plaza",
+				"direccion":"768 5th Ave, New York, NY 10019, EE. UU.",
+				"coordenadas":[
+					
+					"40.7641756",
+					"-73.9774806"
+					
+				]
+			},
+
+			{
+				"nombre":"Tiffany & Co.",
+				"direccion":"727 5th Ave, New York, NY 10022, EE. UU.",
+				"coordenadas":[
+					
+					"40.7641703",
+					"-74.0088192"
+					
+					]
+			},
+
+			{
+				"nombre":"Trump Tower",
+				"direccion":"725 5th Ave, New York, NY 10022, EE. UU.",
+				"coordenadas":[
+					
+					"40.7624284",
+					"-73.9759827"
+					
+				]
+			},
+
+				{
+				"nombre":"MoMa",
+				"direccion":"11 W 53rd St, New York, NY 10019, EE. UU.",
+				"coordenadas":[
+					
+					"40.7614327",
+					"-73.9798103"
+					
+				]
+			},
+
+				{
+				"nombre":"St. Patrick Cathedral",
+				"direccion":"5th Ave, New York, NY 10022, EE. UU.",
+				"coordenadas":[
+					
+					"40.7584653",
+					"-73.9781814"
+					
+				]
+			},
+
+				{
+				"nombre":"Rockefeller Center",
+				"direccion":"45 Rockefeller Plaza, New York, NY 10111, EE. UU.",
+				"coordenadas":[
+					
+					"40.7587402",
+					"-73.9808623"
+					
+				]
+			},
+
+			{
+				"nombre":"Waldorf Astoria",
+				"direccion":"301 Park Ave, New York, NY 10022, EE. UU.",
+				"coordenadas":[
+					
+					"40.7565217",
+					"-73.9763408"
+					
+				]
+			},
+
+			{
+				"nombre":"Grand Central Terminal",
+				"direccion":"89 E 42nd St, New York, NY 10017, EE. UU.",
+				"coordenadas":[
+					
+					"40.7527262",
+					"-73.9794181"
+					
+				]
+			},
+
+			{
+				"nombre":"Edificio Chrysler",
+				"direccion":"405 Lexington Ave, New York, NY 10174, EE. UU.",
+				"coordenadas":[
+					
+					"40.7516208",
+					"-73.9776907"
+					
+				]
+			},
+
+			{
+				"nombre":"Madison Square Garden",
+				"direccion":"4 Pennsylvania Plaza, New York, NY 10001, EE. UU.",
+				"coordenadas":[
+					
+					"40.7505045",
+					"-73.9956274"
+					
+				]
+			},
+
+			{
+				"nombre":"Times Square",
+				"direccion":"Manhattan, Nueva York 10036, EE. UU.",
+				"coordenadas":[
+					
+					"40.758895",
+					"-73.9873197"
+					
+				]
+			}
+			
+		
+		],
+		"apto":[
+		  "auto", "colectivo"
+		]
 	}
   ]
 }
