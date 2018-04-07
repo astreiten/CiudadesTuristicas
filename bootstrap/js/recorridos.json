@@ -2,9 +2,9 @@
 	"recorridos" : [
 	{
 		"nombre":"museosNuevaYork",
-		"tiempo":"3",
+		"tiempo": 3,
 		"categoria":"cultural",
-		"tarifa":"7",
+		"tarifa": 20,
 		"puntos": 
 		[
 			{
