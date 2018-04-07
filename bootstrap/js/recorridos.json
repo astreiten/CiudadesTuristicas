@@ -59,7 +59,7 @@
 				"coordenadas":[
 					
 					"40.767778",
-					"73.9740222"
+					"-73.9740222"
 					
 				]
 			},
@@ -101,6 +101,96 @@
 		],
 		"apto":[
 		  "auto", "colectivo"
+		]
+	},
+	{
+		"nombre":"bici-recorrido",
+		"tiempo": 5,
+		"categoria":"turistico",
+		"tarifa": 10,
+		"puntos": 
+		[
+			{
+				"nombre":"Balto Statue",
+				"direccion":"East Dr, New York, NY 10022, EE. UU.",
+				"coordenadas":[
+					
+					"40.7764191",
+					"-73.9769422"
+					
+				]
+			},
+
+			{
+				"nombre":"Fuente Bethesda",
+				"direccion":"Terrace Dr, New York, NY 10024, EE. UU.",
+				"coordenadas":[
+					
+					"40.7740603",
+					"-73.973019"
+					
+					]
+			},
+
+			{
+				"nombre":"Obelisk Cleopatra's Needle",
+				"direccion":"E 81st Street, New York, NY 10024, EE. UU..",
+				"coordenadas":[
+					
+					"40.7796358",
+					"-73.9675851"
+					
+				]
+			},
+
+				{
+				"nombre":"Jacqueline Kennedy Onassis Reservoir",
+				"direccion":"Nueva York, 10128, EE. UU.",
+				"coordenadas":[
+					
+					"40.785495",
+					"-73.9664505"
+					
+				]
+			},
+
+			{
+				"nombre":"Belvedere Castle",
+				"direccion":"79th St, New York, NY 10021, EE. UU.",
+				"coordenadas":[
+					
+					"40.7796163",
+					"-73.9740862"
+					
+				]
+			},
+
+				{
+				"nombre":"Edificio Dakota",
+				"direccion":"1 W 72nd St, New York, NY 10023, EE. UU.",
+				"coordenadas":[
+					
+					"40.7765258",
+					"-73.9783295"
+					
+				]
+			},
+
+				{
+				"nombre":"Strawberry Fields",
+				"direccion":"W 72nd St, New York, NY 10019, EE. UU.",
+				"coordenadas":[
+					
+					"40.7765254",
+					"-73.9848956"
+					
+				]
+			}
+			
+		
+		],
+		"apto":[
+		  "bicicleta"
 		]
 	}
   ]
