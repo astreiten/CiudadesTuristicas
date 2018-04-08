@@ -140,7 +140,7 @@ function filtrarRecorridos(movilidad_valor, tarifa_valor, categoria_valor, durac
 }
   xmlhttp.open("GET", url, true);
   xmlhttp.send();
-  document.getElementById("mostrador").innerHTML= "<b>Recorridos encontrados segun el filtrado: </b>";
+  document.getElementById("mostrador").innerHTML= "<strong>Recorridos encontrados segun el filtrado: </strong>";
   
 
 }
@@ -183,7 +183,8 @@ function mostrarRecorridos(cumplen)
     var result=str.link("https://www.google.com.ar");
     var botonVerMapa= '<button id="botonReco" type="button">Ver recorrido en mapa</button>';
 
-    document.getElementById("mostrador").innerHTML=document.getElementById("mostrador").innerHTML+"<br>"+result+" "+botonVerMapa;
+  
+    document.getElementById("mostrador").innerHTML=document.getElementById("mostrador").innerHTML+"<br><li>"+result+"</li>"+botonVerMapa;
     document.getElementById("botonReco").addEventListener("click", function(){
     cargarEnMapa(recorridoEnMapa);
 });

@@ -1,7 +1,7 @@
 {
 	"recorridos" : [
 	{
-		"nombre":"museosNuevaYork",
+		"nombre":"Museos Nueva York",
 		"tiempo": 3,
 		"categoria":"cultural",
 		"tarifa": 20,
@@ -47,7 +47,7 @@
 		]
 	},
 	{
-		"nombre":"atraccionJovenes",
+		"nombre":"Atraccion para jovenes",
 		"tiempo": 4,
 		"categoria":"ninos",
 		"tarifa": 10,
@@ -194,7 +194,7 @@
 		]
 	}, 
 		{
-		"nombre":"MidtownManhattan",
+		"nombre":"Midtown-Manhattan",
 		"tiempo": 5,
 		"categoria":"turistico",
 		"tarifa": 5,
