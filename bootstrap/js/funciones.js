@@ -191,11 +191,13 @@ function mostrarRecorridos(cumplen)
 
 function cargarEnMapa(reco)
 {
-  alert("hola"+reco.puntos[0].coordenadas[0]);
-  var myLatlng = new google.maps.LatLng(reco.puntos[0].coordenadas[0],reco.puntos[1].coordenadas[1]);
+  for (var i=0;i<reco.puntos.length;i++)
+  {
+  var myLatlng = new google.maps.LatLng(reco.puntos[i].coordenadas[0],reco.puntos[i].coordenadas[1]);
   var marker=new google.maps.Marker({
-          position: {lat:  40.6971494, lng: -74.2598712},
+          position: myLatlng,
           map:mapa,
           title: 'hello world'
         })
+  }
 }
