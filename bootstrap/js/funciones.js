@@ -180,7 +180,7 @@ function mostrarRecorridos(cumplen)
   {
     var str= cumplen[i].nombre;
     var recorridoEnMapa=cumplen[i];
-    var result=str.link("https://www.google.com.ar");
+    var result=str.link("https://astreiten.github.io/CiudadesTuristicas/bootstrap/bicicletas.html");
     var botonVerMapa= '<button id="botonReco" type="button">Ver recorrido en mapa</button>';
 
   
