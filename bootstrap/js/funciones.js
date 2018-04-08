@@ -181,10 +181,10 @@ function mostrarRecorridos(cumplen)
     var str= cumplen[i].nombre;
     var recorridoEnMapa=cumplen[i];
     var result=str.link("https://www.google.com.ar");
-    var botonVerMapa= '<button id="botonReco" type="button">Ver recorrido en mapa</button>';
+    var botonVerMapa= '<button id="botonReco" class="btn btn-outline-dark type="button">Ver recorrido en mapa</button>';
 
   
-    document.getElementById("mostrador").innerHTML=document.getElementById("mostrador").innerHTML+"<br><li>"+result+"</li>"+botonVerMapa;
+    document.getElementById("mostrador").innerHTML=document.getElementById("mostrador").innerHTML+"<br> -"+result+" "+botonVerMapa;
     document.getElementById("botonReco").addEventListener("click", function(){
     cargarEnMapa(recorridoEnMapa);
 });
