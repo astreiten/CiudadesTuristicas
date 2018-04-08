@@ -104,7 +104,7 @@
 		]
 	},
 	{
-		"nombre":"bici-recorrido",
+		"nombre":"Recorrido para bicicletas",
 		"tiempo": 5,
 		"categoria":"turistico",
 		"tarifa": 10,
