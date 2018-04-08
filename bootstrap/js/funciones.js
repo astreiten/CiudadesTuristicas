@@ -1,3 +1,5 @@
+var mapa;
+
 function prueba() {
     document.getElementById("campo").firstChild.data = "Aca deberia aparecer todos los recorridos para esas caracteristicas. ";
 }
@@ -44,11 +46,9 @@ function initMap() {
           zoom: 10
         });
 
-        var marker=new google.maps.Marker({
-          position: {lat: -34.397, lng: 150.644},
-          map:map,
-          title: 'hello world'
-        })
+        mapa=map;
+
+        
       }
 
 function encontrarChequeado(){
@@ -108,6 +108,8 @@ function filtrarRecorridos(movilidad_valor, tarifa_valor, categoria_valor, durac
         var cumpleTarifa=false;
         var cumpleCategoria=false;
         var cumpleDuracion=false;
+        var cumplen=new Array();
+        var cant=0;
         
         for (var j=0; j<myArr.recorridos.length;j++)
         {
@@ -118,18 +120,19 @@ function filtrarRecorridos(movilidad_valor, tarifa_valor, categoria_valor, durac
 
           if(cumpleTarifa && cumpleDuracion && cumpleCategoria && cumpleMovilidad)
           {
-            alert("el recorrido fue agregado con la nueva logica");
+            cumplen[cant]=myArr.recorridos[j];
+            alert("aca hay "+cumplen[cant].nombre);
+            cant++;
           }
           else
           {
-            alert("el recorrido NO fue agregado con la nueva logica");
+            //alert("el recorrido NO fue agregado con la nueva logica");
           }
 
-          cumpleMovilidad=false;
-          cumpleTarifa=false;
-          cumpleCategoria=false;
-          cumpleDuracion=false;
+          
         }
+
+        mostrarRecorridos(cumplen);
         
     }
     else{
@@ -138,6 +141,7 @@ function filtrarRecorridos(movilidad_valor, tarifa_valor, categoria_valor, durac
 }
   xmlhttp.open("GET", url, true);
   xmlhttp.send();
+  document.getElementById("mostrador").innerHTML= "<button> Filtrar recorridos</button>";
   
 
 }
@@ -165,4 +169,33 @@ function chequearDuracion(recorrido,duracion_valor)
 function chequearTarifa(recorrido,tarifa_valor)
 {
   return tarifa_valor >= recorrido.tarifa;
+}
+
+function mostrarRecorridos(cumplen)
+{
+ 
+  for (var i=0;i<cumplen.length;i++)
+  {
+    var str= cumplen[i].nombre;
+    var re=cumplen[i];
+    var result=str.link("https://www.google.com.ar");
+    var botonhijodeputa= '<button id="botonReco" type="button">Click Me!</button>';
+
+    //document.getElementById("botonReco").addEventListener("click",function(){cargarEnMapa(cumplen[i]);},false);
+    document.getElementById("mostrador").innerHTML=document.getElementById("mostrador").innerHTML+"<br>"+result+" "+botonhijodeputa;
+    document.getElementById("botonReco").addEventListener("click", function(){
+    cargarEnMapa(re);
+});
+  }
+}
+
+function cargarEnMapa(reco)
+{
+  alert("hola"+reco.puntos[0].coordenadas[0]);
+  var myLatlng = new google.maps.LatLng(reco.puntos[0].coordenadas[0],reco.puntos[1].coordenadas[1]);
+  var marker=new google.maps.Marker({
+          position: {lat:  40.6971494, lng: -74.2598712},
+          map:mapa,
+          title: 'hello world'
+        })
 }
