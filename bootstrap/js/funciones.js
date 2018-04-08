@@ -180,11 +180,16 @@ function mostrarRecorridos(cumplen)
   {
     var str= cumplen[i].nombre;
     var recorridoEnMapa=cumplen[i];
+<<<<<<< HEAD
     var result=str.link("https://astreiten.github.io/CiudadesTuristicas/bootstrap/bicicletas.html");
     var botonVerMapa= '<button id="botonReco" type="button">Ver recorrido en mapa</button>';
+=======
+    var result=str.link("https://www.google.com.ar");
+    var botonVerMapa= '<button id="botonReco" class="btn btn-outline-dark type="button">Ver recorrido en mapa</button>';
+>>>>>>> 7021796afcb34f06694717a3bd8d4b61e762a20a
 
   
-    document.getElementById("mostrador").innerHTML=document.getElementById("mostrador").innerHTML+"<br><li>"+result+"</li>"+botonVerMapa;
+    document.getElementById("mostrador").innerHTML=document.getElementById("mostrador").innerHTML+"<br> -"+result+" "+botonVerMapa;
     document.getElementById("botonReco").addEventListener("click", function(){
     cargarEnMapa(recorridoEnMapa);
 });
