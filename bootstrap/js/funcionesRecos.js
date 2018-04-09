@@ -1,6 +1,6 @@
 $(function() {
-  document.getElementById("eti").firstChild.data = localStorage.getItem("comentario");
-  alert("entre a tu pagina");
+ // document.getElementById("eti").firstChild.data = localStorage.getItem("comentario");
+  obtenerInformacionJSON();
 
 });
 
@@ -47,9 +47,7 @@ function obtenerDatosRecorridos(myArr){
 	for (var i =0 ; i < myArr.recorridos[2].puntos.length; i++)
 		obtenerPuntos(myArr, i);
 
-/*	var imagen = myArr.recorridos[2].punto[0].imagen;
-	document.getElementById("imagen_punto0").innerHTML.src =  "https://cdn.viewing.nyc/assets/media/cf514f22475403ee4d373553c7c01e6a/elements/6ffbc7b650ba173552fae172b4b6190e/xl/f500fa04-9414-46cc-8828-5f9853dfac61_2x.jpg";
-*/	
+	
 }
 
 function obtenerPuntos(myArr, i){
@@ -62,6 +60,9 @@ function obtenerPuntos(myArr, i){
 	document.getElementById("direccion_punto"+i).innerHTML = direccionPunto;
 	
 
+	var imagen = myArr.recorridos[2].puntos[i].imagen;
+	var lugarImagen = document.getElementById("imagen_punto"+i).setAttribute('src',imagen);
+	
 
 }
 

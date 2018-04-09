@@ -125,6 +125,7 @@
 			{
 				"nombre":"Fuente Bethesda",
 				"direccion":"Terrace Dr, New York, NY 10024, EE. UU.",
+				"imagen": "https://static.panoramio.com.storage.googleapis.com/photos/large/19394472.jpg",
 				"coordenadas":[
 					
 					"40.7740603",
@@ -136,6 +137,7 @@
 			{
 				"nombre":"Obelisk Cleopatra's Needle",
 				"direccion":"E 81st Street, New York, NY 10024, EE. UU..",
+				"imagen": "https://i.pinimg.com/originals/e1/b4/0f/e1b40f96cda2336a5338e2a1adfd53c8.jpg",
 				"coordenadas":[
 					
 					"40.7796358",
@@ -147,6 +149,7 @@
 				{
 				"nombre":"Jacqueline Kennedy Onassis Reservoir",
 				"direccion":"Nueva York, 10128, EE. UU.",
+				"imagen": "http://photos.wikimapia.org/p/00/00/01/36/22_big.jpg",
 				"coordenadas":[
 					
 					"40.785495",
@@ -158,6 +161,7 @@
 			{
 				"nombre":"Belvedere Castle",
 				"direccion":"79th St, New York, NY 10021, EE. UU.",
+				"imagen":"https://upload.wikimedia.org/wikipedia/commons/1/11/BelvedereCastle2.jpg",
 				"coordenadas":[
 					
 					"40.7796163",
@@ -169,6 +173,7 @@
 				{
 				"nombre":"Edificio Dakota",
 				"direccion":"1 W 72nd St, New York, NY 10023, EE. UU.",
+				"imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/1_West_72nd_Street_%28The_Dakota%29_by_David_Shankbone.jpg/1200px-1_West_72nd_Street_%28The_Dakota%29_by_David_Shankbone.jpg",
 				"coordenadas":[
 					
 					"40.7765258",
@@ -180,6 +185,7 @@
 				{
 				"nombre":"Strawberry Fields",
 				"direccion":"W 72nd St, New York, NY 10019, EE. UU.",
+				"imagen": "http://i.ngenespanol.com/dam/tbg/traveler/lugares/17/12/08/imagine-john-lennon-strawberryfields-centralpark-4.jpg.imgw.1280.1280.jpeg",
 				"coordenadas":[
 					
 					"40.7765254",
