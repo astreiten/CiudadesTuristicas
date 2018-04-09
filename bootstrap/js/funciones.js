@@ -222,17 +222,11 @@ function oyentePaginaRecorrido(){
 
 function loadStyle(n)
 {
+  if (n == null) n = 2;
   var style="css/estilo"+n+".css";
   document.getElementById('esti').setAttribute('href',style);
 }
 
-<<<<<<< HEAD
-  if( document.styleSheets[2].disabled == true){
-    alert("entre al if");
-   document.styleSheets[1].disabled = true;
-   document.styleSheets[2].disabled = false;
-    
-=======
 function changeStyle()
 {
   var txt=document.getElementById("esti").getAttribute('href');
@@ -240,7 +234,6 @@ function changeStyle()
   {
     document.getElementById('esti').setAttribute('href', 'css/estilo2.css');
     localStorage.setItem("estilo",2);
->>>>>>> 4fef09d867e84828fbeceb9575687b39292c6f45
   }
   else
   {
