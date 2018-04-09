@@ -1,5 +1,10 @@
 var mapa;
 
+$(function() {
+  loadStyle(localStorage.getItem("estilo"));
+});
+
+
 function prueba() {
     document.getElementById("campo").firstChild.data = "Aca deberia aparecer todos los recorridos para esas caracteristicas. ";
 }
@@ -215,22 +220,33 @@ function oyentePaginaRecorrido(){
 	localStorage.setItem("comentario",texto);
 }
 
-function cambiarEstilo()
+function loadStyle(n)
 {
+  var style="css/estilo"+n+".css";
+  document.getElementById('esti').setAttribute('href',style);
+}
 
+<<<<<<< HEAD
   if( document.styleSheets[2].disabled == true){
     alert("entre al if");
    document.styleSheets[1].disabled = true;
    document.styleSheets[2].disabled = false;
     
+=======
+function changeStyle()
+{
+  var txt=document.getElementById("esti").getAttribute('href');
+  if(txt=="css/estilo1.css")
+  {
+    document.getElementById('esti').setAttribute('href', 'css/estilo2.css');
+    localStorage.setItem("estilo",2);
+>>>>>>> 4fef09d867e84828fbeceb9575687b39292c6f45
   }
-  else{
-    alert("entre al else");
-     document.styleSheets[2].disabled = true;
-      document.styleSheets[1].disabled = false;
+  else
+  {
+    document.getElementById('esti').setAttribute('href', 'css/estilo1.css');
+    localStorage.setItem("estilo",1);
   }
+  
 }
 
-alert("ejecutr");
-document.styleSheets[1].disabled = false;
-document.styleSheets[2].disabled=true;
