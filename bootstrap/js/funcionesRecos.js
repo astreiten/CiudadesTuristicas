@@ -3,9 +3,9 @@ $(function() {
 });
 
 function oyentePaginaRecorrido(){
+	alert("aca entre");
 	var texto= document.getElementById("paginaRecorrido").value;
-	alert(texto+"djs");
-	alert("kekeke");
+	alert(texto);
 	localStorage.setItem("comentario",texto);
 
 	obtenerInformacionJSON();
