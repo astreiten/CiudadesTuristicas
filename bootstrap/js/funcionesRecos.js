@@ -3,28 +3,26 @@ $(function() {
 });
 
 function oyentePaginaRecorrido(){
-	alert("aca entre");
 	var texto= document.getElementById("paginaRecorrido").value;
-	alert(texto);
 	localStorage.setItem("comentario",texto);
-
 	obtenerInformacionJSON();
 }
 
 function obtenerInformacionJSON(){
-	alert("pq no entras");
+	
+    alert("kkk");
   var xmlhttp = new XMLHttpRequest();
   var url="https://astreiten.github.io/CiudadesTuristicas/bootstrap/js/recorridos.json";
-  	alert("pq no entras2");
   xmlhttp.onreadystatechange = function() {
-  		alert("pq no entras3");
     if (this.readyState == 4 && this.status == 200) {
         var myArr = JSON.parse(this.responseText);
         var nombre = myArr.recorridos[2].nombre;
+    	var stringNombre= '<p><h1><strong>This line rendered as bold text.</strong></h1>';
+
+    document.getElementById("nombre_recorrido").innerHTML= stringNombre;
 
     }else
-    	alert("state: "+this.readyState+" status: "+this.status);
-        
+    	
 	}
 
 	  xmlhttp.open("GET", url, true);
