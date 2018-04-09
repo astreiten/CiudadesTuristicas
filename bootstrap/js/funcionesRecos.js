@@ -64,3 +64,9 @@ function obtenerPuntos(myArr, i){
 
 
 }
+
+function borrarContenido(){
+document.getElementById("paginaRecorrido").innerHTML = "";
+	
+
+}

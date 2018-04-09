@@ -1,3 +1,13 @@
 #ultima_fila {
-	  background-color: #66CDAA;
+	  background-color: #B0C4DE;
+}
+
+h7, .h7 {
+  font-size: 1.60rem;
+  color: #808080;
+}
+
+h8, .h8{
+	font-size: 1.20rem;
+	color: #000000;
 }

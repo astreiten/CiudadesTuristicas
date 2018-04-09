@@ -83,10 +83,7 @@ function filtrarRecorridos(movilidad_valor, tarifa_valor, categoria_valor, durac
             cumplen[cant]=myArr.recorridos[j];
             cant++;
           }
-          else
-          {
-            //alert("el recorrido NO fue agregado con la nueva logica");
-          }
+          
 
           
         }
@@ -100,7 +97,6 @@ function filtrarRecorridos(movilidad_valor, tarifa_valor, categoria_valor, durac
 }
   xmlhttp.open("GET", url, true);
   xmlhttp.send();
-  document.getElementById("mostrador").innerHTML= "<strong>Recorridos encontrados segun el filtrado: </strong>";
 
 }
 
@@ -132,21 +128,25 @@ function chequearTarifa(recorrido,tarifa_valor)
 function mostrarRecorridos(cumplen)
 {
   if (cumplen.length == 0){
-      document.getElementById("mostrador").innerHTML= "No se encontraron recorridos con esas caracteristicas. "
-
+        alert("No se encontraron recorridos con esas caracteristicas. ");
   }
-  for (var i=0;i<cumplen.length;i++)
-  {
-    var str= cumplen[i].nombre;
-    var recorridoEnMapa=cumplen[i];
-    var result=str.link("https://astreiten.github.io/CiudadesTuristicas/bootstrap/bicicletas.html");
-    var botonVerMapa= '<button id="botonReco" class="btn btn-outline-dark type="button">Ver recorrido en mapa</button>';
+  else{
 
-    document.getElementById("mostrador").innerHTML=document.getElementById("mostrador").innerHTML+"<br> - "+result+" "+botonVerMapa;
-    document.getElementById("botonReco").addEventListener("click", function(){
-    cargarEnMapa(recorridoEnMapa);
-});
+      document.getElementById("mostrador").innerHTML= " <h7>Recorridos encontrados segun el filtrado: </h7>";
+      for (var i=0;i<cumplen.length;i++)
+      {
+        var str= cumplen[i].nombre;
+        var recorridoEnMapa=cumplen[i];
+        var result=str.link("https://astreiten.github.io/CiudadesTuristicas/bootstrap/bicicletas.html");
+        var botonVerMapa= '<button id="botonReco" class="btn btn-outline-primary" type="button">Ver recorrido en mapa</button>';
+
+        document.getElementById("mostrador_izquierda").innerHTML=document.getElementById("mostrador_izquierda").innerHTML+"<li><h8>"+result+"</h8></li> <br>";
+        document.getElementById("mostrador_derecha").innerHTML= botonVerMapa;
+        document.getElementById("botonReco").addEventListener("click", function(){
+        cargarEnMapa(recorridoEnMapa);
+    });
   }
+}
 }
 
 function cargarEnMapa(reco)
