@@ -189,7 +189,7 @@ function mostrarRecorridos(cumplen)
 
 
   
-    document.getElementById("mostrador").innerHTML=document.getElementById("mostrador").innerHTML+"<br> -"+result+" "+botonVerMapa;
+    document.getElementById("mostrador").innerHTML=document.getElementById("mostrador").innerHTML+"<br> - "+result+" "+botonVerMapa;
     document.getElementById("botonReco").addEventListener("click", function(){
     cargarEnMapa(recorridoEnMapa);
 });
@@ -209,10 +209,8 @@ function cargarEnMapa(reco)
   }
 }
 
-function oyenteTUR(){
-	
-	//document.getElementById("exa").value="prueba";
-	var texto= document.getElementById("exa").value;
+function oyentePaginaRecorrido(){	
+	var texto= document.getElementById("paginaRecorrido").value;
 	alert(texto);
 	localStorage.setItem("comentario",texto);
 }
