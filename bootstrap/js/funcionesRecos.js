@@ -46,18 +46,21 @@ function obtenerDatosRecorridos(myArr){
 	//Obtengo los puntos
 	for (var i =0 ; i < myArr.recorridos[2].puntos.length; i++)
 		obtenerPuntos(myArr, i);
-	
+
+/*	var imagen = myArr.recorridos[2].punto[0].imagen;
+	document.getElementById("imagen_punto0").innerHTML.src =  "https://cdn.viewing.nyc/assets/media/cf514f22475403ee4d373553c7c01e6a/elements/6ffbc7b650ba173552fae172b4b6190e/xl/f500fa04-9414-46cc-8828-5f9853dfac61_2x.jpg";
+*/	
 }
 
 function obtenerPuntos(myArr, i){
 	//Punto 1
 	var punto = myArr.recorridos[2].puntos[i].nombre;
 	document.getElementById("titulo_punto"+i).innerHTML = punto;
-	alert(punto);
+	
 
 	var direccionPunto = myArr.recorridos[2].puntos[i].direccion;
 	document.getElementById("direccion_punto"+i).innerHTML = direccionPunto;
-	alert(direccionPunto);
+	
 
 
 }
