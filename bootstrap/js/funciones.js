@@ -214,3 +214,23 @@ function oyentePaginaRecorrido(){
 	alert(texto);
 	localStorage.setItem("comentario",texto);
 }
+
+function cambiarEstilo()
+{
+
+  if( document.styleSheets[2].disabled =true){
+    alert("entre al if");
+   document.styleSheets[1].disabled = true;
+   document.styleSheets[2].disabled = false;
+    
+  }
+  else{
+    alert("entre al else");
+     document.styleSheets[2].disabled = true;
+      document.styleSheets[1].disabled = false;
+  }
+}
+
+alert("ejecutr");
+document.styleSheets[1].disabled = false;
+document.styleSheets[2].disabled=true;
