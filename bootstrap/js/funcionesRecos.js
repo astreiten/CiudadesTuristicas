@@ -8,7 +8,7 @@ function oyentePaginaRecorrido(){
 	alert(texto);
 	localStorage.setItem("comentario",texto);
 
-	obtenerInformacionJSON();
+	//obtenerInformacionJSON();
 }
 
 function obtenerInformacionJSON(){
@@ -23,4 +23,5 @@ function obtenerInformacionJSON(){
 
     }
         
+	}
 }
