@@ -5,56 +5,13 @@ $(function() {
 });
 
 
-function prueba() {
-    document.getElementById("campo").firstChild.data = "Aca deberia aparecer todos los recorridos para esas caracteristicas. ";
-}
-
-function oyente(){
-  initMap();
-}
-
-function init(){
- document.getElementById("campo").firstChild.data = "hola";
- var xmlhttp= new XMLHttpRequest();
- var url="https://astreiten.github.io/CiudadesTuristicas/bootstrap/js/pizzas.json";
-
-
- xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        var myArr = JSON.parse(this.responseText);
-        myFunction(myArr);
-    }
-    else{
-         document.getElementById("campo").firstChild.data = "Status: " + this.status + "State " + this.readyState;
-    }
-}
-
-  
-  xmlhttp.open("GET", url, true);
-
-  xmlhttp.send();
-
-}
-
-
-  function myFunction(arr) {
-    
-     document.getElementById("campo").firstChild.data = "entre a la nueva version";
-      document.getElementById("campo").firstChild.data = arr.prueba;
-   
-}
-
 function initMap() {
-        // Create a map object and specify the DOM element for display.
-        var map = new google.maps.Map(document.getElementById("campo"), { //PONERLE CAMPOOOOOOOOO 
-          center: {lat: 40.6971494, lng: -74.2598712},
-          zoom: 10
-        });
-
-        mapa=map;
-
-        
-      }
+  // Create a map object and specify the DOM element for display.
+  mapa = new google.maps.Map(document.getElementById("campo"), { 
+    center: {lat: 40.6971494, lng: -74.2598712},
+    zoom: 10
+   });
+}
 
 function encontrarChequeado(){
   //Encontrar chequeado movilidad
@@ -98,8 +55,6 @@ function encontrarChequeado(){
 
     filtrarRecorridos(movilidad_valor, tarifa_valor, categoria_valor, duracion_valor);
 }
-
-
 
 
 function filtrarRecorridos(movilidad_valor, tarifa_valor, categoria_valor, duracion_valor){
@@ -146,7 +101,6 @@ function filtrarRecorridos(movilidad_valor, tarifa_valor, categoria_valor, durac
   xmlhttp.open("GET", url, true);
   xmlhttp.send();
   document.getElementById("mostrador").innerHTML= "<strong>Recorridos encontrados segun el filtrado: </strong>";
-  
 
 }
 
@@ -185,15 +139,9 @@ function mostrarRecorridos(cumplen)
   {
     var str= cumplen[i].nombre;
     var recorridoEnMapa=cumplen[i];
-
     var result=str.link("https://astreiten.github.io/CiudadesTuristicas/bootstrap/bicicletas.html");
-   
-
-   
     var botonVerMapa= '<button id="botonReco" class="btn btn-outline-dark type="button">Ver recorrido en mapa</button>';
 
-
-  
     document.getElementById("mostrador").innerHTML=document.getElementById("mostrador").innerHTML+"<br> - "+result+" "+botonVerMapa;
     document.getElementById("botonReco").addEventListener("click", function(){
     cargarEnMapa(recorridoEnMapa);
@@ -214,11 +162,7 @@ function cargarEnMapa(reco)
   }
 }
 
-function oyentePaginaRecorrido(){	
-	var texto= document.getElementById("paginaRecorrido").value;
-	alert(texto);
-	localStorage.setItem("comentario",texto);
-}
+/* ESTILOS */
 
 function loadStyle(n)
 {
