@@ -5,6 +5,7 @@
 		"tiempo": 3,
 		"categoria":"cultural",
 		"tarifa": 20,
+		"descripcion": "Un recorrido rebosante de cultura, haciendo foco en el arte y la historia natural. Desde fósiles milenarios hasta obras contemporáneas, este paseo quedará por siempre en su memoria.",
 		"puntos": 
 		[
 			{
@@ -54,6 +55,7 @@
 		"tiempo": 4,
 		"categoria":"ninos",
 		"tarifa": 10,
+		"descripcion": "Para los mas jóvenes, este divertido recorrido nos lleva por los lugares que todos sueñan conocer. Entretenimiento asegurado.",
 		"puntos": 
 		[
 			{
@@ -115,6 +117,7 @@
 		"tiempo": 5,
 		"categoria":"turistico",
 		"tarifa": 10,
+		"descripcion": "Con el legendario Central Park como eje y figura, este recorrido tiene la cuota justa de naturaleza e historia para ser disfrutado a bordo de una bicicleta. Solo o en familia, esta es una opción sana y vistosa.",
 		"puntos": 
 		[
 			{
@@ -212,6 +215,7 @@
 		"tiempo": 5,
 		"categoria":"turistico",
 		"tarifa": 5,
+		"descripcion": "Arte, cultura, religión, historia,deportes y comercio. Existe algún recorrido mas completo que éste? La síntesis de la Ciudad en 11 maravillosas locaciones.",
 		"puntos": 
 		[
 			{
