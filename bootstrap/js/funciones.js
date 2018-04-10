@@ -14,6 +14,11 @@ function initMap() {
    });
 }
 
+function redireccionar()
+{
+  window.location.href="https://astreiten.github.io/CiudadesTuristicas/bootstrap/index.html";
+}
+
 function encontrarChequeado(){
   //Encontrar chequeado movilidad
   var movilidad = document.getElementsByName('movilidad');
