@@ -12,3 +12,8 @@ h8, .h8{
 	color: #000000;
 }
 
+
+hr, .hr {
+	 width: 100%; 
+	 border-top: 0px;
+}
