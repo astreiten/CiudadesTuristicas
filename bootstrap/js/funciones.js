@@ -9,8 +9,8 @@ $(function() {
 function initMap() {
   // Create a map object and specify the DOM element for display.
   mapa = new google.maps.Map(document.getElementById("campo"), { 
-    center: {lat: 40.6971494, lng: -74.2598712},
-    zoom: 10
+    center: {lat: 40.7825, lng: -73.966111},
+    zoom: 12
    });
 }
 
