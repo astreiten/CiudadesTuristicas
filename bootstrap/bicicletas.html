@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <link rel="shortcut icon" href="icono.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="js/funcionesRecos.js"></script>
@@ -13,7 +14,7 @@
 
     <title>Recorrido </title>
   </head>
-  <body style="background-color: #FFF8DC;">
+  <body >
 
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -37,7 +38,7 @@
 </nav>
 
 
- <div class="container-fluid" style="background-color: #FFF8DC;  "> 
+ <div class="container-fluid" > 
     <div id="nombre_recorrido">
     </div>
     
@@ -56,6 +57,7 @@
         </strong>
     </div>
     
+    <hr>
     <div class="row">
      <div class="col-md-3" >
         
@@ -137,13 +139,16 @@
       </div>
     
 </div>
+
+<hr>
     <div class="row">
     <div class="col-md-9" id="textfield" class="form-group">
+    <strong>  Ingrese o edite su comentario </strong>
     <textarea onClick="borrarContenido()" class="form-control" id="paginaRecorrido" rows="3">Ingrese aqui su comentario acerca del recorrido..</textarea>
     </div>
   
     <div class="col-md-3" id="muestra_comentario">
-
+     <strong> Comentarios anteriores </strong>
      <div class="form-group" >
     <textarea class="form-control" id="exampleFormControlTextarea1"  rows="3" readonly></textarea>
   </div>
@@ -153,6 +158,19 @@
   </div>
     <button onClick="oyentePaginaRecorrido()" id="but" type="button" class="btn btn-primary">Enviar comentario</button>
 
+<hr>
+<div class="row" id="ultima_fila" style="background-color: #FFF8DC;">
+
+  <div class="col-md-2" >
+    <img src="http://www.pcactual.com/medio/2017/06/30/google-maps_51b78e0b.jpg" class="rounded-circle" alt="Cinque Terre" width="150" height="100"> 
+
+  </div>
+
+  <div id="ultima_fila" class="col-md-10">
+   <p class="text-secondary"><em>
+    Quien tiene el viaje ya contratado, lo primero que busca son rutas por Nueva York, que sean fáciles de seguir y que nos muestren los principales puntos de interés de la ciudad o que nos ayuden a seleccionar los sitios a los que visitar, realizar nuestras compras o diferentes actividades. En esta sección es lo que te hemos intentado ofrecer, rutas caminando por Nueva York, de como máximo un día de duración, y que te acercan a los principales punto de interés de Nueva York y Manhattan.
+  </em></p>
+</div>
 
 
 
