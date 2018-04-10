@@ -1,15 +1,15 @@
 #ultima_fila {
-	  background-color: #B0C4DE;
+	  background-color: #A2D9CE;
 }
 
 h7, .h7 {
   font-size: 1.60rem;
-  color: #808080;
+  color: #A2D9CE;
 }
 
 h8, .h8{
 	font-size: 1.20rem;
-	color: #000000;
+	color: #A2D9CE;
 }
 
 
@@ -19,6 +19,18 @@ hr, .hr {
 }
 
 #navbar_1 {
-	  background-color: #F5F5F5;
+	  background-color: #34495E;
 }
 
+#boton_home{
+	background-color: #A2D9CE;
+}
+
+
+#boton_estilo{
+	background-color: #A2D9CE;
+}
+
+h12, .h12 {
+	color: #000000;
+}
