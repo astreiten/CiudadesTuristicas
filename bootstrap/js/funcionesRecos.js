@@ -1,5 +1,4 @@
 $(function() {
- // document.getElementById("eti").firstChild.data = localStorage.getItem("comentario");
   obtenerInformacionJSON();
   var al=localStorage.getItem("comentario");
   document.getElementById("paginaRecorrido").value=al;
