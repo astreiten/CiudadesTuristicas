@@ -182,7 +182,7 @@ function cargarEnMapa(reco)
   var marker=new google.maps.Marker({
           position: myLatlng,
           map:mapa,
-          title: 'hello world'
+          title: reco.puntos[i].nombre
         })
   markersArray[i]=marker;
   }
