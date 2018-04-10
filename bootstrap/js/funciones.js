@@ -1,4 +1,5 @@
 var mapa;
+var markersArray = [];
 
 $(function() {
   loadStyle(localStorage.getItem("estilo"));
@@ -140,7 +141,7 @@ function mostrarRecorridos(cumplen)
         var result=str.link("https://astreiten.github.io/CiudadesTuristicas/bootstrap/bicicletas.html");
         var botonVerMapa= '<button id="botonReco" class="btn btn-outline-primary" type="button">Ver recorrido en mapa</button>';
 
-        document.getElementById("mostrador_izquierda").innerHTML=document.getElementById("mostrador_izquierda").innerHTML+"<li><h8>"+result+"</h8></li> <br>";
+        document.getElementById("mostrador_izquierda").innerHTML="<li><h8>"+result+"</h8></li> <br>";
         document.getElementById("mostrador_derecha").innerHTML= botonVerMapa;
         document.getElementById("botonReco").addEventListener("click", function(){
         cargarEnMapa(recorridoEnMapa);
@@ -151,6 +152,7 @@ function mostrarRecorridos(cumplen)
 
 function cargarEnMapa(reco)
 {
+  clearOverlays();
   for (var i=0;i<reco.puntos.length;i++)
   {
   var myLatlng = new google.maps.LatLng(reco.puntos[i].coordenadas[0],reco.puntos[i].coordenadas[1]);
@@ -159,6 +161,7 @@ function cargarEnMapa(reco)
           map:mapa,
           title: 'hello world'
         })
+  markersArray[i]=marker;
   }
 }
 
@@ -185,5 +188,12 @@ function changeStyle()
     localStorage.setItem("estilo",1);
   }
   
+}
+
+function clearOverlays() {
+  for (var i = 0; i < markersArray.length; i++ ) {
+    markersArray[i].setMap(null);
+  }
+  markersArray.length = 0;
 }
 
