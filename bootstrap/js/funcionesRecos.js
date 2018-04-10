@@ -1,6 +1,6 @@
 $(function() {
   obtenerInformacionJSON();
-  var al=localStorage.getItem("comentario");
+  var al=localStorage.getItem("comentario"+document.title);
   document.getElementById("paginaRecorrido").value=al;
   cargarComentarios();
 
@@ -8,7 +8,7 @@ $(function() {
 
 function oyentePaginaRecorrido(){
 	var texto= document.getElementById("paginaRecorrido").value;
-	localStorage.setItem("comentario",texto);
+	localStorage.setItem("comentario"+document.title,texto);
 	cargarComentarios();
 }
 
@@ -77,7 +77,7 @@ document.getElementById("paginaRecorrido").innerHTML = "";
 }
 
 function cargarComentarios(){
-	document.getElementById("exampleFormControlTextarea1").value=localStorage.getItem("comentario");
+	document.getElementById("exampleFormControlTextarea1").value=localStorage.getItem("comentario"+document.title);
 }
 
 function getN(titulo)
