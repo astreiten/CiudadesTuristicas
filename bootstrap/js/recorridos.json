@@ -50,7 +50,7 @@
 		]
 	},
 	{
-		"nombre":"Atraccion para jovenes",
+		"nombre":"Recorrido juvenil",
 		"tiempo": 4,
 		"categoria":"ninos",
 		"tarifa": 10,
@@ -144,7 +144,7 @@
 			{
 				"nombre":"Obelisk Cleopatra's Needle",
 				"direccion":"E 81st Street, New York, NY 10024, EE. UU..",
-				"imagen": "https://i.pinimg.com/originals/e1/b4/0f/e1b40f96cda2336a5338e2a1adfd53c8.jpg",
+				"imagen": "https://image.ibb.co/nm7MBc/obelisk.jpg",
 				"coordenadas":[
 					
 					"40.7796358",
@@ -180,7 +180,7 @@
 				{
 				"nombre":"Edificio Dakota",
 				"direccion":"1 W 72nd St, New York, NY 10023, EE. UU.",
-				"imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/1_West_72nd_Street_%28The_Dakota%29_by_David_Shankbone.jpg/1200px-1_West_72nd_Street_%28The_Dakota%29_by_David_Shankbone.jpg",
+				"imagen": "https://preview.ibb.co/fJrWBc/1200px_1_West_72nd_Street_The_Dakota_by_David_Shankbone.jpg",
 				"coordenadas":[
 					
 					"40.7765258",
@@ -208,7 +208,7 @@
 		]
 	}, 
 		{
-		"nombre":"Midtown-Manhattan",
+		"nombre":"Recorrido Midtown-Manhattan",
 		"tiempo": 5,
 		"categoria":"turistico",
 		"tarifa": 5,
