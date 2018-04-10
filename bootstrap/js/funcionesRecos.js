@@ -47,8 +47,8 @@ function obtenerDatosRecorridos(myArr){
 	document.getElementById("tiempo_recorrido").innerHTML = document.getElementById("tiempo_recorrido").innerHTML +" "+tiempo+" horas";
 
 	//Obtengo descripcion
-	var descripcion = myArr.recorridos[numeroRecorrido].puntos[i].descripcion;
-	document.getElementById("descripcion_recorrido"+i).innerHTML = document.getElementById("descripcion_recorrido").innerHTML +" "+descripcion;
+	var descripcion = myArr.recorridos[numeroRecorrido].descripcion;
+	document.getElementById("descripcion_recorrido").innerHTML = document.getElementById("descripcion_recorrido").innerHTML +" "+descripcion;
 
 	//Obtengo los puntos
 	for (var i =0 ; i < myArr.recorridos[numeroRecorrido].puntos.length; i++)
