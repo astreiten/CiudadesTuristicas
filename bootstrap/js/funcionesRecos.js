@@ -28,41 +28,43 @@ function obtenerInformacionJSON(){
 }
 
 function obtenerDatosRecorridos(myArr){
+	var numeroRecorrido=getN(document.title);
 	//Obtengo nombre
-	var nombre = myArr.recorridos[2].nombre;
+	var nombre = myArr.recorridos[numeroRecorrido].nombre;
     var stringNombre= "<p><h1><strong>"+nombre+"</strong></h1>";
 	document.getElementById("nombre_recorrido").innerHTML= stringNombre;
 
 	//Obtengo tarifa
-	var tarifa = myArr.recorridos[2].tarifa;
+	var tarifa = myArr.recorridos[numeroRecorrido].tarifa;
 	document.getElementById("tarifa_recorrido").innerHTML = document.getElementById("tarifa_recorrido").innerHTML +" U$ "+tarifa;
 
 	//Obtengo categoria
-	var categoria = myArr.recorridos[2].categoria;
+	var categoria = myArr.recorridos[numeroRecorrido].categoria;
 	document.getElementById("categoria_recorrido").innerHTML = document.getElementById("categoria_recorrido").innerHTML +" "+categoria;
 
 	//Obtengo tiempo estimado
-	var tiempo = myArr.recorridos[2].tiempo;
+	var tiempo = myArr.recorridos[numeroRecorrido].tiempo;
 	document.getElementById("tiempo_recorrido").innerHTML = document.getElementById("tiempo_recorrido").innerHTML +" "+tiempo+" horas";
 
 	//Obtengo los puntos
-	for (var i =0 ; i < myArr.recorridos[2].puntos.length; i++)
+	for (var i =0 ; i < myArr.recorridos[numeroRecorrido].puntos.length; i++)
 		obtenerPuntos(myArr, i);
 
 	
 }
 
 function obtenerPuntos(myArr, i){
+	var numeroRecorrido=getN(document.title);
 	//Punto 1
-	var punto = myArr.recorridos[2].puntos[i].nombre;
+	var punto = myArr.recorridos[numeroRecorrido].puntos[i].nombre;
 	document.getElementById("titulo_punto"+i).innerHTML = punto;
 	
 
-	var direccionPunto = myArr.recorridos[2].puntos[i].direccion;
+	var direccionPunto = myArr.recorridos[numeroRecorrido].puntos[i].direccion;
 	document.getElementById("direccion_punto"+i).innerHTML = direccionPunto;
 	
 
-	var imagen = myArr.recorridos[2].puntos[i].imagen;
+	var imagen = myArr.recorridos[numeroRecorrido].puntos[i].imagen;
 	var lugarImagen = document.getElementById("imagen_punto"+i).setAttribute('src',imagen);
 	
 
@@ -76,4 +78,30 @@ document.getElementById("paginaRecorrido").innerHTML = "";
 
 function cargarComentarios(){
 	document.getElementById("exampleFormControlTextarea1").value=localStorage.getItem("comentario");
+}
+
+function getN(titulo)
+{
+	if (titulo=="Museos Nueva York")
+	{
+		return 0;
+	}
+	else
+	{
+		if (titulo=="Recorrido juvenil")
+			{
+				return 1;
+			}
+		else
+		{
+			if (titulo=="Recorrido para bicicletas")
+			{
+				return 2;
+			}
+			else
+			{
+				return 3;
+			}
+		}
+	}
 }
