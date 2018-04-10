@@ -138,7 +138,30 @@ function mostrarRecorridos(cumplen)
       {
         var str= cumplen[i].nombre;
         var recorridoEnMapa=cumplen[i];
-        var result=str.link("https://astreiten.github.io/CiudadesTuristicas/bootstrap/bicicletas.html");
+        var result;
+        if (str=="Recorrido para bicicletas")
+        {
+          result=str.link("https://astreiten.github.io/CiudadesTuristicas/bootstrap/bicicletas.html");
+        }
+        else
+        {
+          if(str=="Recorrido juvenil")
+          {
+            result=str.link("https://astreiten.github.io/CiudadesTuristicas/bootstrap/juvenil.html");
+          }
+          else
+          {
+            if(str=="Recorrido Midtown-Manhattan")
+            {
+              result=str.link("https://astreiten.github.io/CiudadesTuristicas/bootstrap/mid.html");
+            }
+            else
+            {
+              result=str.link("https://astreiten.github.io/CiudadesTuristicas/bootstrap/museos.html");
+            }
+          }
+        }
+
         var botonVerMapa= '<button id="botonReco" class="btn btn-outline-primary" type="button">Ver recorrido en mapa</button>';
 
         document.getElementById("mostrador_izquierda").innerHTML="<li><h8>"+result+"</h8></li> <br>";
