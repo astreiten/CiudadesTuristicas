@@ -1,13 +1,16 @@
 $(function() {
  // document.getElementById("eti").firstChild.data = localStorage.getItem("comentario");
   obtenerInformacionJSON();
+  var al=localStorage.getItem("comentario");
+  document.getElementById("paginaRecorrido").value=al;
+  cargarComentarios();
 
 });
 
 function oyentePaginaRecorrido(){
 	var texto= document.getElementById("paginaRecorrido").value;
 	localStorage.setItem("comentario",texto);
-	obtenerInformacionJSON();
+	cargarComentarios();
 }
 
 function obtenerInformacionJSON(){
@@ -70,4 +73,8 @@ function borrarContenido(){
 document.getElementById("paginaRecorrido").innerHTML = "";
 	
 
+}
+
+function cargarComentarios(){
+	document.getElementById("exampleFormControlTextarea1").value=localStorage.getItem("comentario");
 }
